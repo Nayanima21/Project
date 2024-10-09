@@ -1,0 +1,283 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VirtuClass</title>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+            .navbar {
+                background-color: #2b3e50;
+                padding: 35px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+            }
+
+            .navbar .logo {
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            .navbar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            .navbar ul li {
+                margin: 0 15px;
+            }
+
+            .navbar ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 5px 10px;
+                font-size: 1.2rem;
+            }
+
+            .navbar ul li a:hover {
+                background-color: #1e2d3b;
+                border-radius: 4px;
+            }
+
+           
+.timetable-heading {
+    background-color: #e0e0e0; 
+    text-align: center;
+    padding: 10px 0;  
+    margin-bottom: 0; 
+}
+
+.timetable-heading h2 {
+    margin: 0;        
+    font-size: 1.8rem; 
+    color: #2b3e50;    
+    font-family: "Times New Roman", Times, serif;
+}
+
+            .hero {
+                background-image: url('timetable.jpeg');
+                height: 110vh;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+            }
+
+            .hero .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(132, 130, 130, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;  
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin: 0;
+            }
+
+            /* Services Section */
+            .students {
+                padding: 50px 20px;
+                text-align: center;
+            }
+
+            .students h2 {
+                margin-bottom: 30px;
+                font-size: 2.5rem;
+                color: #2a2727;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .student1 {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .student2 {
+                width: 30%;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .student2 h3 {
+                font-size: 1.5rem;
+                color: #2b3e50;
+                margin-bottom: 10px;
+            }
+
+            .student2 p {
+                color: #e6d3d3;
+            }
+
+            
+            .footer {
+                background-color: #2b3e50;
+                color: white;
+                padding: 40px 20px;
+            }
+
+            .footer .footer-content {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .footer .footer-content .footer-section {
+                width: 30%;
+            }
+
+            .footer .footer-section h4 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            .footer .footer-section p, .footer .footer-section a {
+                color: white;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+
+            .footer .footer-section a:hover {
+                text-decoration: underline;
+            }
+
+            
+            @media screen and (max-width: 768px) {
+                .navbar ul {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .student1 {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .student2 {
+                    width: 80%;
+                    margin-bottom: 20px;
+                }
+
+                .footer .footer-content {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .footer .footer-section {
+                    width: 80%;
+                    margin-bottom: 20px;
+                }
+            }
+            .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a.active {
+    background-color: #1e2d3b; 
+    border-radius: 4px;
+    padding: 8px 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.navbar ul li a:hover {
+    background-color: #1e2d3b;
+    border-radius: 4px;
+}
+
+        </style>
+        <script>
+            const navLinks = document.querySelectorAll('.navbar ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(item => item.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        </script>
+        
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">Welcome To VirtuClass</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">PracticeCode</a></li>
+                <li><a href="#">Whiteboard</a></li>
+                <li><a href="#">Wellness Resources</a></li>
+            </ul>
+        </div>
+        <div class="timetable-heading">
+            <h2>Timetable</h2>
+        </div>
+       
+        <div class="hero">
+            <div class="overlay">
+                
+            </div>
+        </div>
+        <div class="students">
+            <h2>Student_Name</h2>
+            <div class="student1">
+                <div class="student2">
+                    <a href="student_info.html">
+                        <h3>Student Information</h3>
+                    </a>
+                </div>
+                <div class="student2">
+                    <a href="classes.html">
+                    <h3>Classes</h3>
+                    </a>
+                    </div>
+                <div class="student2">
+                    <a href="teachers.html">
+                    <h3>Know Your Teachers</h3>
+                </a>
+                    </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Upcoming Deadlines</h4>
+                    <p>Quizzes Dates</p>
+                    <p>Assignment Submission</p>
+                    <p>Project Submission</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Calendar</h4>
+                    <p><a href="#">2021-22</a></p>
+                    <p><a href="#">2022-23</a></p>
+                    <p><a href="#">2023-24</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Details</h4>
+                    <p>Email: student@gmail.com</p>
+                    <p>Phone: +91-9123567893</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </body>
+    </html>
